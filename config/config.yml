@@ -1,0 +1,36 @@
+# **以下模型参数来自参考文献
+# 设备和动力学参数
+V: 100.0
+k_0: 7.2e+10
+E_div_R: 1.0e+4
+ro: 1.0e+3
+roc: 1.0e+3
+Cp: 1.0
+Cpc: 1.0
+qc: 100.0
+hA: 7.0e+5
+delta_H: 2.0e+5
+Tc_0: 350.0
+
+# 设备操作参数
+ca_0: 1.0
+T_0: 350.0
+q: 100.0
+
+# ode模拟运行参数
+dt: 0.01      # time step during integration
+steps: 450    # integration time steps
+obs_n: 50     # observed samples number during each ivp process
+init_states_n: 100   # initial states number
+
+# 字段变量参数
+vars: ['ca', 'T']
+var_bounds:
+  ca: [0.0, 1.0]
+  T: [300, 520]
+  
+# 神经网络相关参数
+discrete_t_steps: 10  # 积分离散步数
+
+lr: 0.001
+epochs: 20000

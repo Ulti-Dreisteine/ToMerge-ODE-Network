@@ -1,0 +1,1 @@
+{"pd_net": {"input_size": 3, "hidden_sizes": [12, 12, 8, 8], "output_size": 2}}
